@@ -128,7 +128,71 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFloatingCta();
   }
 
-  // --- 5. フォーム読み込みのステータス監視＆フォールバック ---
+});
+
+// Register before the deferred provider script can send its first height message.
+(() => {
+  // --- 埋め込みフォームの高さを、PC・スマホ共通で内容に合わせる ---
+  const formHost = document.getElementById('xhm-form');
+  const formOrigin = 'https://form.hirameki7.io';
+  const preparedFrames = new WeakSet();
+  let formResizeTimer;
+  const refreshFormSize = () => {
+    clearTimeout(formResizeTimer);
+    formResizeTimer = setTimeout(() => {
+      formHost?.querySelector('iframe')?.contentWindow?.postMessage(
+        { type: 'shown', params: {} }, formOrigin
+      );
+    }, 150);
+  };
+  const prepareFormFrame = () => {
+    const frame = formHost?.querySelector('iframe');
+    if (!frame || preparedFrames.has(frame)) return;
+    preparedFrames.add(frame);
+    frame.title = '無料相談・資料請求フォーム';
+    // Height messages normally show the entire form. Until then, allow scrolling
+    // so a delayed provider response cannot make the last controls unreachable.
+    frame.setAttribute('scrolling', formHost.hasAttribute('data-sized') ? 'no' : 'auto');
+    frame.addEventListener('load', refreshFormSize);
+    refreshFormSize();
+  };
+  if (formHost) {
+    new MutationObserver(prepareFormFrame).observe(formHost, { childList: true });
+    prepareFormFrame();
+    window.addEventListener('message', event => {
+      const frame = formHost.querySelector('iframe');
+      const message = event.data;
+      if (event.origin !== formOrigin || event.source !== frame?.contentWindow ||
+          !message || message.target !== 'xhm-form' ||
+          !['ready', 'height'].includes(message.type)) return;
+      const reportedHeight = message.params?.h;
+      if (typeof reportedHeight !== 'number' || !Number.isFinite(reportedHeight) ||
+          reportedHeight <= 300 || reportedHeight > 100000) return;
+      // Hirameki7 reports content bottom + 301px for calendar popovers. Keep
+      // that reserve only while a popover is open, plus 24px of breathing room.
+      const reserve = message.params.isOverflow ? 0 : 300;
+      const height = Math.max(500, Math.ceil(reportedHeight - reserve + 24));
+      formHost.style.setProperty('--contact-frame-height', `${height}px`);
+      formHost.setAttribute('data-sized', 'true');
+      frame.setAttribute('scrolling', height > 500 ? 'no' : 'auto');
+    });
+    // Ask the provider to remeasure when a narrow screen changes orientation
+    // or the browser restores the page. Its existing handler retains form data.
+    let lastFormWidth;
+    new ResizeObserver(entries => {
+      const width = entries[0].contentRect.width;
+      if (width !== lastFormWidth) {
+        lastFormWidth = width;
+        refreshFormSize();
+      }
+    }).observe(formHost);
+    new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) refreshFormSize();
+    }, { rootMargin: '200px 0px' }).observe(formHost);
+    window.addEventListener('pageshow', refreshFormSize);
+  }
+
+  // --- 6. フォーム読み込みのステータス監視＆フォールバック ---
   setTimeout(() => {
     const xhmForm = document.getElementById('xhm-form');
     const formFallback = document.getElementById('form-fallback-msg');
@@ -138,4 +202,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }, 4000);
-});
+})();

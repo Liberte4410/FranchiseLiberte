@@ -406,14 +406,11 @@ body {
   white-space: nowrap;
 }
 
-.hero-eyebrow::after {
-  content: '';
-  position: absolute;
-  bottom: -.07em;
-  left: 46%;
-  width: 1.3em;
-  height: 2px;
-  background: #0daff1;
+.hero-space {
+  text-decoration: underline;
+  text-decoration-color: #38a7ca;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .24em;
 }
 
 .hero-recruitment {
@@ -422,12 +419,12 @@ body {
   justify-content: center;
   width: 83%;
   min-height: 1.8em;
-  margin: 0 0 8px;
-  padding: .16em .4em .22em;
+  margin: 0 0 20px;
+  padding: .38em .8em .45em;
   border-radius: 999px;
   background: linear-gradient(110deg, #ffe34e 0%, #ffd13b 58%, #ffb51e 100%);
   box-shadow: 0 7px 18px rgba(40, 173, 218, .16);
-  font-size: clamp(26px, 2.64vw, 44px);
+  font-size: clamp(24px, 2.3vw, 38px);
   font-weight: 900;
   line-height: 1.4;
   white-space: nowrap;
@@ -507,22 +504,22 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: clamp(75px, 6.5vw, 109px);
-  padding: 6px 2px;
+  min-height: clamp(92px, 7.5vw, 126px);
+  padding: 16px 12px;
   border: 1.5px solid;
   border-radius: 14px;
   white-space: nowrap;
 }
 
 .hero-fact dt {
-  font-size: clamp(13px, 1.34vw, 22px);
+  font-size: clamp(12px, 1.15vw, 19px);
   font-weight: 900;
   line-height: 1.5;
 }
 
 .hero-fact dd {
-  margin: 0;
-  font-size: clamp(27px, 2.65vw, 44px);
+  margin: 6px 0 0;
+  font-size: clamp(23px, 2.15vw, 35px);
   font-weight: 900;
   letter-spacing: -.06em;
   line-height: 1.3;
@@ -551,14 +548,14 @@ body {
 }
 
 .hero-fact--style dt { color: #bc164d; }
-.hero-fact--style dd { font-size: clamp(24px, 2.47vw, 41px); }
+.hero-fact--style dd { font-size: clamp(21px, 1.95vw, 32px); }
 
 .hero-support {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .9em;
-  margin: .35em 0 .3em;
+  margin: .75em 0 .6em;
   font-size: clamp(16px, 1.6vw, 27px);
   font-weight: 900;
   line-height: 1.6;
@@ -579,30 +576,31 @@ body {
 .hero-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 12px;
 }
 
 .hero-actions .hero-button {
-  min-height: clamp(63px, 5.5vw, 92px);
-  padding: .5em .7em;
+  min-height: clamp(72px, 5.8vw, 98px);
+  padding: .85em 1.2em;
   border-radius: 17px;
-  font-size: clamp(18px, 1.83vw, 30px);
-  letter-spacing: -.05em;
+  font-size: clamp(16px, 1.5vw, 25px);
+  letter-spacing: -.025em;
+  gap: .6em;
 }
 
 .hero-actions .hero-button--line {
-  font-size: clamp(16px, 1.68vw, 28px);
+  font-size: clamp(14px, 1.32vw, 22px);
 }
 
 .hero-actions .button-chevron {
-  position: absolute;
-  right: .8em;
+  position: static;
+  margin-left: .2em;
 }
 
 .hero-actions .hero-button--line .button-chevron { right: .62em; }
 
 .hero-note {
-  margin: .45em 0 0;
+  margin: .8em 0 0;
   font-size: clamp(14px, 1.45vw, 24px);
   font-weight: 700;
   line-height: 1.65;
@@ -784,13 +782,26 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 .problem-heading > div { margin-bottom: 14px; border-radius: 50%; box-shadow: none; }
 .content-section .problem-heading h3 { font-size: 22px; }
 #challenges > div > div:last-child { background: linear-gradient(120deg, #e5f4fb, #f9fcff); border-color: #bbdce9; }
-#challenges > div > div:last-child p:nth-child(1) { font-size: 19px; }
+#challenges .solution-banner { padding: 36px 32px; }
+#challenges .solution-banner > p { font-size: clamp(21px, 1.8vw, 26px); line-height: 1.8; font-weight: 700; }
+#challenges .solution-banner > div > p:first-child { font-size: clamp(24px, 2.1vw, 30px); margin: 12px 0; }
+#challenges .solution-banner > div > p:last-child { font-size: clamp(22px, 1.9vw, 28px); font-weight: 700; }
+#challenges .challenge-grid > div { padding: 28px 24px; }
+#challenges .problem-heading h3 { line-height: 1.55; text-wrap: nowrap; }
+#challenges .problem-heading h3 > span { display: block; }
+.problem-sentence { display: block; }
+.problem-chunk { display: inline-block; max-width: 100%; }
+.problem-sentence + .problem-sentence { margin-top: .7em; }
+#challenges .challenge-grid p { text-wrap: pretty; line-height: 1.85; }
 #challenges .marker-yellow, #challenges .marker-cyan, #challenges .marker-pink { display: inline-block; font-weight: 700; margin: 4px 6px; }
 #reasons .three-card-grid h3 { font-size: 24px; }
 #reasons .three-card-grid li { font-size: 18px; line-height: 1.85; font-weight: 500; }
 #reasons .three-card-grid p { font-size: 18px; }
 #reasons .three-card-grid .h-60 { height: auto; aspect-ratio: 1.5; }
 #reasons .three-card-grid .h-60 > img { height: auto; }
+#reasons .reason-summary { margin: 12px 0 22px; padding-bottom: 18px; border-bottom: 1px solid #c6e1ef; font-weight: 700; line-height: 1.85; text-wrap: pretty; }
+#reasons .reason-summary > span { display: block; }
+#reasons .reason-copy { padding: 28px; }
 #voices .three-card-grid > div { padding: 28px; }
 #voices .three-card-grid > div > div > .flex { align-items: flex-start; }
 #voices img { flex-shrink: 0; }
@@ -802,6 +813,12 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 .comparison-table tbody th { font-weight: 700; }
 .comparison-table tbody td { font-size: 18px; font-weight: 500; }
 .comparison-table tbody td:last-child { font-weight: 700; }
+.content-section .comparison-table-wrap { overflow: hidden; isolation: isolate; }
+@media (min-width: 768px) {
+  .comparison-table { border-collapse: separate; border-spacing: 0; table-layout: fixed; }
+  .comparison-table tr > :is(th, td) + :is(th, td) { border-left: 1px solid #9dc6dc; }
+  .comparison-table tbody tr > :is(th, td) { border-top: 1px solid #dceaf2; }
+}
 #comparison h2 .phrase:nth-child(2) { margin: 0 .45em; font-size: .65em; font-family: Georgia, serif; font-style: italic; }
 .content-section .investment-card { padding: 40px; }
 .investment-card > .text-5xl { font-size: 76px; font-weight: 700; line-height: 1.3; }
@@ -811,9 +828,10 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 .investment-card .btn-cta-primary .phrase { display: block; }
 .expansion-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .content-section .expansion-stats span { font-size: 14px; line-height: 1.6; }
-.content-section .expansion-stats p { font-size: 26px; font-weight: 700; line-height: 1.5; white-space: nowrap; }
+.content-section .expansion-stats p { font-size: 26px; font-weight: 700; line-height: 1.5; white-space: normal; }
 .content-section .expansion-stats .stat-qualifier { font-size: inherit; }
 .store-photo { display: block; width: 100%; height: auto; object-fit: contain; }
+.expansion-map { align-self: end; }
 .profile-copy .company-reading { display: block; font-size: .85em; font-weight: 500; }
 .content-section .profile-copy strong { font-size: 18px; }
 .content-section .profile-copy > div:first-child > span { font-size: 16px; line-height: 1.8; }
@@ -830,8 +848,8 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 .accordion-content > div { font-size: 18px; line-height: 1.9; font-weight: 500; }
 .accordion-content.active { max-height: none; }
 
-/* The provider assigns the wrapper a height 300px shorter than its iframe.
-   Let the iframe determine the wrapper height so its last controls stay visible. */
+/* Keep the wrapper and iframe the same height. script.js removes the provider's
+   calendar reserve from its height messages while retaining space for controls. */
 #contact-form-section { overflow: visible; }
 #contact-form-section > div { padding-left: 16px; padding-right: 16px; }
 #contact-form-section .glass-card { padding: 32px 24px; overflow: visible; }
@@ -844,6 +862,7 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   overflow: visible !important;
 }
 #xhm-form iframe { display: block; width: 100% !important; max-width: 100%; border: 0; border-radius: 0; }
+#xhm-form[data-sized] iframe { height: var(--contact-frame-height) !important; }
 .content-section .form-help p { font-size: 15px; }
 .form-help a { font-size: 16px; line-height: 1.7; }
 #contact-form-section .glass-card > div:last-child > .flex { flex-direction: column; }
@@ -856,7 +875,21 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .content-section { font-size: 20px; }
   #reasons .three-card-grid li, #reasons .three-card-grid p { font-size: 19px; }
 }
-@media (min-width: 1440px) { .challenge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1101px) {
+  #reasons .reason-copy h3 { min-height: 3.1em; display: flex; align-items: flex-start; margin-bottom: 0; }
+  #reasons .reason-summary { min-height: calc(3.7em + 19px); }
+}
+@media (min-width: 1280px) {
+  #reasons .reason-copy h3 { min-height: 1.55em; }
+}
+@media (min-width: 1101px) and (max-width: 1279px) {
+  .content-section .expansion-stats p { font-size: 23px; }
+  .content-section .expansion-stats .stat-qualifier { display: block; font-size: 16px; }
+}
+@media (min-width: 1440px) {
+  .challenge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .problem-chunk { display: block; }
+}
 @media (max-width: 1100px) {
   .three-card-grid { grid-template-columns: 1fr; max-width: 720px; margin: 0 auto; }
   .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -878,6 +911,10 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .problem-heading > div { margin: 0; }
   #challenges .problem-heading h3 { font-size: 21px; text-wrap: pretty; }
   #challenges > div > div:last-child { padding: 24px 16px; }
+  #challenges .solution-banner > p { font-size: 20px; }
+  #challenges .solution-banner > div > p:first-child { font-size: 24px; }
+  #challenges .solution-banner > div > p:last-child { font-size: 22px; }
+  #challenges .problem-heading { align-items: center; }
   #reasons .three-card-grid > div > div > .p-5 { padding: 24px; }
   #voices .three-card-grid > div { padding: 24px; }
   #comparison h2 .phrase { display: block; }
@@ -913,6 +950,24 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   #contact-form-section .glass-card > div:last-child p { font-size: 18px; }
   .glass-footer { padding-bottom: 115px; }
 }
+@media (max-width: 600px) {
+  .franchise-hero__inner { padding-top: 24px; padding-bottom: 30px; }
+  .hero-eyebrow { margin-bottom: 18px; }
+  .hero-recruitment { padding: .4em 1em .48em; margin-bottom: 16px; }
+  .hero-title { font-size: 9.1vw; }
+  .hero-subtitle { margin: 16px 0 20px; }
+  .hero-details { margin-top: 20px; }
+  .hero-facts { grid-template-columns: 1fr; gap: 9px; }
+  .hero-fact { flex-direction: row; justify-content: space-between; gap: 14px; padding: 15px 18px; border-radius: 12px; }
+  .hero-fact dt { margin: 0; font-size: 14px; }
+  .hero-fact dd, .hero-fact--style dd { margin: 0; font-size: 25px; line-height: 1.4; }
+  .hero-fact--style dd { font-size: 23px; }
+  .hero-support { margin: 20px 0 14px; font-size: 3.6vw; gap: .7em; }
+  .hero-actions { gap: 12px; }
+  .hero-actions .hero-button, .hero-actions .hero-button--line { min-height: 64px; padding: 17px 20px; font-size: 19px; gap: .6em; }
+  .hero-actions .hero-button--line { font-size: 18px; }
+  .hero-note { margin-top: 18px; font-size: 13px; white-space: normal; text-wrap: balance; }
+}
 @media (max-width: 374px) {
   .content-section h2 { font-size: 28px; }
   .content-section > div { padding-left: 16px; padding-right: 16px; }
@@ -921,4 +976,8 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   #profile .profile-copy h3 > span { display: block; }
   .problem-heading { display: block; }
   .problem-heading > div { margin-bottom: 12px; }
+  .hero-fact { padding: 14px; gap: 12px; }
+  .hero-fact dt { font-size: 13px; }
+  .hero-fact dd, .hero-fact--style dd { font-size: 23px; }
+  .hero-fact--style dd { font-size: 21px; }
 }
