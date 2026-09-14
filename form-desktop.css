@@ -1,0 +1,18 @@
+/* Hirameki7 フォーム36655のCSS編集欄に追記するPC専用の差分。
+   LP側からは読み込まない。既存のフォームCSSは残す。 */
+@media (min-width: 768px) {
+  #xd-form-inputs #xhm_1764220739_parts {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #xd-form-inputs #xhm_1764220739_parts > .xhm-annotation {
+    white-space: nowrap;
+  }
+
+  #xd-form-inputs #xhm_1764921139 .pc-mail-break {
+    display: block;
+  }
+}

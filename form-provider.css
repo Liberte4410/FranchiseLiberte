@@ -1,0 +1,192 @@
+/*
+ * Hirameki 7 / form_id=36655: append to the FORM'S CSS editor.
+ * This file cannot style a cross-origin iframe from index.html.
+ * Keep the existing provider CSS, fields, scripts and reCAPTCHA.
+ */
+#xd-form-inputs,
+#xd-form-inputs *,
+#xd-form-inputs *::before,
+#xd-form-inputs *::after {
+  box-sizing: border-box;
+}
+#xd-form-inputs {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  color: #29495c;
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+#xd-form-inputs .container,
+#xd-form-inputs .xd-form-inputs-container,
+#xd-form-inputs section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+#xd-form-inputs .xd-form-inputs-container {
+  padding: 0 12px;
+}
+#xd-form-inputs .xhm-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+/* Remove the nested negative gutters that add 16px at each address level. */
+#xd-form-inputs .xhm-grid--gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+#xd-form-inputs .xhm-grid-cell {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 1 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+#xd-form-inputs .xhm-grid--1of2,
+#xd-form-inputs .xhm-name .xhm-grid,
+#xd-form-inputs .xhm-address .xhm-grid {
+  display: block;
+}
+#xd-form-inputs .xhm-grid--1of2 {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+#xd-form-inputs .xhm-address .xhm-grid-cell,
+#xd-form-inputs .xhm-name .xhm-grid-cell {
+  margin-bottom: 8px;
+}
+#xd-form-inputs .xhm-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #173f56;
+}
+#xd-form-inputs input:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]),
+#xd-form-inputs select,
+#xd-form-inputs textarea,
+#xd-form-inputs .xhm-address-select-box {
+  display: block;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 100%;
+  min-width: 0;
+}
+#xd-form-inputs input:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]),
+#xd-form-inputs select,
+#xd-form-inputs textarea {
+  min-height: 48px;
+  padding: 11px 12px;
+  border: 1px solid #aebfca;
+  border-radius: 4px;
+  background: #fff;
+  color: #29495c;
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+#xd-form-inputs select { padding-right: 36px; }
+#xd-form-inputs textarea { min-height: 144px; resize: vertical; }
+#xd-form-inputs input:focus-visible,
+#xd-form-inputs select:focus-visible,
+#xd-form-inputs textarea:focus-visible,
+#xd-form-inputs button:focus-visible {
+  outline: 2px solid #4b819f;
+  outline-offset: 2px;
+}
+#xd-form-inputs .xhm-message-error + input,
+#xd-form-inputs .xhm-message-error + select,
+#xd-form-inputs .xhm-message-error + textarea {
+  border-color: #c53c48;
+  background: #fff7f8;
+}
+#xd-form-inputs .xhm-radio-label { max-width: 100%; white-space: normal; }
+#xd-form-inputs .xhm-radio-label > span { overflow-wrap: anywhere; }
+#xd-form-inputs .xhm-annotation { font-size: 14px; line-height: 1.8; }
+#xd-form-inputs .xhm-grid-cell-confirm pre {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  margin: 0;
+}
+#xd-form-inputs .xhm-grid:has(> .xhm-grid-cell > .xhm-btn-prev) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+  margin: 24px auto;
+}
+#xd-form-inputs .xhm-grid:has(> .xhm-grid-cell > .xhm-btn-prev) > .xhm-grid-cell {
+  width: 100%;
+  flex: none;
+  margin: 0;
+  padding: 0;
+}
+#xd-form-inputs .xhm-btn-prev,
+#xd-form-inputs .xhm-btn-submit,
+#xd-form-inputs .xhm-btn-next {
+  width: 100%;
+  min-width: 0;
+  max-width: 360px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+#xd-form-inputs .xhm-btn-next { margin: 24px auto; }
+#xd-form-inputs .xhm-btn-prev button,
+#xd-form-inputs .xhm-btn-submit button,
+#xd-form-inputs .xhm-btn-next button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  height: auto;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #173f56;
+  border-radius: 4px;
+  background: #173f56;
+  color: #fff;
+  box-shadow: none;
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.7;
+  white-space: normal;
+}
+#xd-form-inputs .xhm-btn-prev button {
+  background: #f3f6f8;
+  border-color: #b8c8d1;
+  color: #29495c;
+}
+#xd-form-inputs .xhm-btn-submit button:hover:not(:disabled),
+#xd-form-inputs .xhm-btn-next button:hover:not(:disabled) { background: #285b76; }
+#xd-form-inputs .xhm-btn-prev button:hover { background: #e8eef2; }
+#xd-form-inputs .xhm-btn-post-search {
+  min-height: 48px;
+  max-width: 100%;
+  color: #173f56;
+  border-color: #9bb8c9;
+}
+#xd-form-inputs a { overflow-wrap: anywhere; }
+@media (max-width: 767px) {
+  #xd-form-inputs .xhm-grid:has(> .xhm-grid-cell > .xhm-btn-prev),
+  #xd-form-inputs .xhm-btn-prev,
+  #xd-form-inputs .xhm-btn-submit,
+  #xd-form-inputs .xhm-btn-next { max-width: 100%; }
+}

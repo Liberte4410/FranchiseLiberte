@@ -815,11 +815,14 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 .comparison-table tbody td:last-child { font-weight: 700; }
 .content-section .comparison-table-wrap { overflow: hidden; isolation: isolate; }
 @media (min-width: 768px) {
+  #challenges .problem-heading h3 { white-space: nowrap; }
+  #challenges .problem-heading h3 > span { display: inline; }
+  .content-section .desktop-copy-line { display: block; }
   .comparison-table { border-collapse: separate; border-spacing: 0; table-layout: fixed; }
   .comparison-table tr > :is(th, td) + :is(th, td) { border-left: 1px solid #9dc6dc; }
   .comparison-table tbody tr > :is(th, td) { border-top: 1px solid #dceaf2; }
 }
-#comparison h2 .phrase:nth-child(2) { margin: 0 .45em; font-size: .65em; font-family: Georgia, serif; font-style: italic; }
+#comparison h2 .phrase:nth-child(2) { margin: 0 .45em; font-size: .65em; font-family: 'Noto Sans JP', Arial, sans-serif; font-style: normal; font-weight: 700; letter-spacing: .06em; }
 .content-section .investment-card { padding: 40px; }
 .investment-card > .text-5xl { font-size: 76px; font-weight: 700; line-height: 1.3; }
 .content-section .investment-details { padding: 28px; }
@@ -888,6 +891,7 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 }
 @media (min-width: 1440px) {
   .challenge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #challenges .problem-heading h3 { font-size: 20px; }
   .problem-chunk { display: block; }
 }
 @media (max-width: 1100px) {
@@ -909,7 +913,8 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .steps-grid > div:last-child .fa-store { display: none; }
   .problem-heading { display: flex; align-items: center; gap: 16px; }
   .problem-heading > div { margin: 0; }
-  #challenges .problem-heading h3 { font-size: 21px; text-wrap: pretty; }
+  #challenges .problem-heading h3 { font-size: clamp(18px, 5.05vw, 21px); white-space: nowrap; text-wrap: nowrap; }
+  #challenges .problem-heading h3 > span { display: inline; }
   #challenges > div > div:last-child { padding: 24px 16px; }
   #challenges .solution-banner > p { font-size: 20px; }
   #challenges .solution-banner > div > p:first-child { font-size: 24px; }
@@ -918,28 +923,34 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   #reasons .three-card-grid > div > div > .p-5 { padding: 24px; }
   #voices .three-card-grid > div { padding: 24px; }
   #comparison h2 .phrase { display: block; }
-  .comparison-table-wrap { border: 0 !important; border-radius: 0; box-shadow: none !important; background: transparent; }
+  .content-section .comparison-table-wrap { border: 0 !important; border-radius: 0; box-shadow: none !important; background: transparent; }
   .comparison-table, .comparison-table tbody { display: block; width: 100%; }
   .comparison-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .comparison-table tbody tr { display: grid; grid-template-columns: 1fr; border: 1px solid #c5dce9; border-radius: 18px; margin-bottom: 16px; overflow: hidden; background: #fff; }
+  #comparison .comparison-table tbody tr { display: grid; grid-template-columns: 1fr; border: 1px solid #d5e5ee; border-radius: 4px; margin-bottom: 16px; overflow: hidden; background: #fff; }
   .comparison-table :is(th, td) { display: block; width: auto; padding: 16px 20px; border-left: 0; text-align: left; font-size: 18px; }
-  .comparison-table tbody th { background: #285676; color: #fff; padding: 12px 20px; }
-  .comparison-table td::before { content: attr(data-label); display: block; margin-bottom: 4px; color: #54748a; font-size: 14px; font-weight: 700; }
-  .comparison-table td:last-child { background: #e6f3fa; }
+  .comparison-table tbody th { background: #e0edf4; color: #193e5e; padding: 12px 20px; }
+  .comparison-table td::before { content: attr(data-label); display: block; margin-bottom: 4px; color: #54748a; font-size: 14px; font-weight: 500; }
+  .comparison-table td:last-child { background: #f3f9fc; border-top: 1px solid #d7e7f0; }
   .comparison-table td:last-child::before { color: #28658b; }
+  #comparison h2 .phrase:nth-child(2) { margin: 8px 0; line-height: 1.4; }
+  .content-section .mobile-copy-line { display: block; }
+  .investment-outcome strong { display: inline-block; }
+  #voices .voice-lead-line { display: block; font-size: clamp(16px, 4.8vw, 18px); white-space: nowrap; }
   .content-section .investment-card { padding: 28px 18px; }
   .investment-card > span { padding: 8px 12px; font-size: 17px; }
   .investment-card > .text-5xl { font-size: 64px; }
   .content-section .investment-details { padding: 20px 16px; }
   .investment-card .btn-cta-primary { font-size: 18px; }
-  .expansion-stats { gap: 7px; }
-  .content-section .expansion-stats p { font-size: 21px; }
-  .content-section .expansion-stats span { font-size: 12px; }
-  .content-section .expansion-stats .stat-qualifier { display: block; font-size: 14px; }
+  .expansion-stats { grid-template-columns: 1fr; gap: 12px; }
+  .content-section .expansion-stats > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 76px; padding: 14px 16px; text-align: left; }
+  .content-section .expansion-stats p { display: grid; grid-template-columns: minmax(0, 1fr) 28px; align-items: baseline; column-gap: 6px; width: 136px; margin: 0; font-size: 26px; text-align: right; white-space: nowrap; }
+  .content-section .expansion-stats span { font-size: 14px; }
+  .content-section .expansion-stats .stat-qualifier { display: inline; font-size: 14px; }
   #profile .glass-card { padding: 24px 18px; }
   #profile .glass-card > .grid { grid-template-columns: 1fr; }
   #profile .glass-card > .grid > div { grid-column: auto; }
   #profile img { max-width: 240px; }
+  .profile-address-line { display: block; font-size: clamp(12px, 3.8vw, 16px); white-space: nowrap; }
   .accordion-btn { padding: 20px 16px; align-items: flex-start; }
   .accordion-btn > span { font-size: 18px; gap: 10px; }
   .accordion-icon { margin-top: 10px; }
@@ -948,6 +959,8 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   #contact-form-section .glass-card { padding: 20px 0; }
   #contact-form-section .glass-card > .form-help, #contact-form-section .glass-card > div:last-child { margin-left: 14px; margin-right: 14px; }
   #contact-form-section .glass-card > div:last-child p { font-size: 18px; }
+  #contact-form-section .contact-line-intro > span { display: block; font-size: clamp(13px, 4.2vw, 18px); white-space: nowrap; }
+  .glass-footer .footer-address { display: block; font-size: clamp(11px, 3.6vw, 15px); white-space: nowrap; }
   .glass-footer { padding-bottom: 115px; }
 }
 @media (max-width: 600px) {
@@ -957,11 +970,12 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
   .hero-title { font-size: 9.1vw; }
   .hero-subtitle { margin: 16px 0 20px; }
   .hero-details { margin-top: 20px; }
-  .hero-facts { grid-template-columns: 1fr; gap: 9px; }
-  .hero-fact { flex-direction: row; justify-content: space-between; gap: 14px; padding: 15px 18px; border-radius: 12px; }
-  .hero-fact dt { margin: 0; font-size: 14px; }
-  .hero-fact dd, .hero-fact--style dd { margin: 0; font-size: 25px; line-height: 1.4; }
-  .hero-fact--style dd { font-size: 23px; }
+  /* 参考画像に合わせた横3列。ラベル・数値は各1行にし、運営スタイルのみ小さめに。 */
+  .hero-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .hero-fact { box-sizing: border-box; min-width: 0; min-height: 74px; flex-direction: column; justify-content: center; gap: 6px; padding: 10px 8px; border-radius: 12px; white-space: nowrap; }
+  .hero-fact dt { margin: 0; font-size: clamp(9.5px, 2.85vw, 16px); line-height: 1.6; }
+  .hero-fact dd, .hero-fact--style dd { display: flex; align-items: center; justify-content: center; height: 1.4em; min-height: 0; margin: 0; font-size: clamp(17px, 5.5vw, 32px); line-height: 1.4; }
+  .hero-fact--style dd { font-size: clamp(14px, 4.3vw, 25px); height: 1.791em; }
   .hero-support { margin: 20px 0 14px; font-size: 3.6vw; gap: .7em; }
   .hero-actions { gap: 12px; }
   .hero-actions .hero-button, .hero-actions .hero-button--line { min-height: 64px; padding: 17px 20px; font-size: 19px; gap: .6em; }
@@ -971,13 +985,115 @@ body { font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif; }
 @media (max-width: 374px) {
   .content-section h2 { font-size: 28px; }
   .content-section > div { padding-left: 16px; padding-right: 16px; }
-  .content-section .expansion-stats p { font-size: 18px; }
-  .content-section .expansion-stats span { font-size: 11px; }
   #profile .profile-copy h3 > span { display: block; }
   .problem-heading { display: block; }
   .problem-heading > div { margin-bottom: 12px; }
-  .hero-fact { padding: 14px; gap: 12px; }
-  .hero-fact dt { font-size: 13px; }
-  .hero-fact dd, .hero-fact--style dd { font-size: 23px; }
-  .hero-fact--style dd { font-size: 21px; }
+  .hero-fact dd { font-size: 5.2vw; }
+  .hero-fact--style dd { font-size: 4.2vw; height: 1.734em; }
+}
+
+
+/* ==================================================================
+   スクロール連動アニメーション
+   script.js が対象要素に data-reveal / data-reveal-img を付与し、
+   画面内に入ったタイミングで .is-visible を足して再生します。
+   （JSが動かない環境では属性が付かないため、通常表示のままです）
+   ================================================================== */
+
+:root [data-reveal] {
+  opacity: 0;
+  transition:
+    opacity .85s cubic-bezier(.22, .61, .36, 1) var(--reveal-delay, 0ms),
+    transform .85s cubic-bezier(.22, .61, .36, 1) var(--reveal-delay, 0ms);
+}
+
+:root [data-reveal="up"]    { transform: translate3d(0, 34px, 0); }
+:root [data-reveal="left"]  { transform: translate3d(-36px, 0, 0); }
+:root [data-reveal="right"] { transform: translate3d(36px, 0, 0); }
+:root [data-reveal="fade"]  { transform: none; }
+
+:root [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* タブレット以下では横方向の動きを縦に統一（横スクロール発生を防ぐ） */
+@media (max-width: 1023px) {
+  :root [data-reveal="left"],
+  :root [data-reveal="right"] { transform: translate3d(0, 30px, 0); }
+}
+
+/* 画像のズームイン（枠が overflow:hidden の画像だけに適用） */
+:root [data-reveal-img] {
+  opacity: 0;
+  transform: scale(1.09);
+  transition:
+    opacity .9s ease var(--reveal-delay, 0ms),
+    transform 1.5s cubic-bezier(.19, .78, .28, 1) var(--reveal-delay, 0ms);
+}
+
+:root [data-reveal-img].is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* セクションラベルの下線を左から引く演出 */
+.content-section .section-label.reveal-underline {
+  position: relative;
+}
+
+.content-section .section-label.reveal-underline::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #06b4ed, #0087d2 60%, #0065b3);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .9s cubic-bezier(.22, .61, .36, 1) calc(var(--reveal-delay, 0ms) + 280ms);
+}
+
+.section-label.reveal-underline.is-visible::after,
+.is-visible .section-label.reveal-underline::after {
+  transform: scaleX(1);
+}
+
+/* ヘッダー：スクロールすると少しコンパクトになる */
+.site-header {
+  transition:
+    height .38s cubic-bezier(.22, .61, .36, 1),
+    background-color .38s ease,
+    box-shadow .38s ease;
+}
+
+.site-header.is-scrolled {
+  height: calc(var(--header-height) * .84);
+  background-color: rgba(255, 255, 255, .93);
+  box-shadow: 0 8px 26px rgba(0, 116, 176, .16);
+}
+
+.site-logo {
+  transition: width .38s cubic-bezier(.22, .61, .36, 1);
+}
+
+.site-header.is-scrolled .site-logo {
+  width: clamp(74px, 7.05vw, 118px);
+}
+
+/* 動きを減らす設定の環境では、アニメーションを止めて即表示 */
+@media (prefers-reduced-motion: reduce) {
+  :root [data-reveal],
+  :root [data-reveal-img] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .section-label.reveal-underline::after {
+    transform: scaleX(1);
+    transition: none;
+  }
+  .site-header,
+  .site-logo { transition: none; }
 }
