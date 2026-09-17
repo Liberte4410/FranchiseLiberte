@@ -19,6 +19,7 @@
 .lp-heading p { margin-top:16px; }
 .lp-phrase { display:inline-block; max-width:100%; text-wrap:balance; }
 .lp-word { display:inline-block; }
+.lp-pc-br { display:inline; }
 #challenges.lp-section > div > .lp-needs-grid { background:none; padding:0; }
 .lp-eyebrow { display:block; margin-bottom:12px; color:var(--lp-blue); font-family:Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:.16em; line-height:1.5; }
 .lp-icon { display:block; width:36px; height:36px; flex:0 0 auto; object-fit:contain; color:var(--lp-blue); fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
@@ -53,7 +54,7 @@
 .lp-type-numbers > div + div { border-left:1px solid #bfd6e3; }
 .lp-type-numbers dt { font-size:15px; color:#4b6578; margin-bottom:5px; }
 .lp-type-numbers dd { color:var(--type-accent); font-size:18px; white-space:nowrap; line-height:1.4; }
-.lp-type-numbers strong { font-size:38px; letter-spacing:-.04em; }
+.lp-type-numbers strong { font-size:38px; letter-spacing:0; }
 .lp-type-numbers sup { font-size:12px; margin-left:2px; }
 .lp-check-list li { display:grid; grid-template-columns:18px minmax(0,1fr); column-gap:9px; font-size:18px; line-height:1.8; }
 .lp-check-list li + li { margin-top:10px; }
@@ -94,7 +95,7 @@
 .lp-work-total strong { font-size:36px; white-space:nowrap; }
 .lp-owner-panel .lp-note { text-align:left; border-top:1px solid var(--lp-line); padding-top:15px; }
 .lp-support-title { display:grid; grid-template-columns:minmax(0,1fr) 160px; align-items:center; margin-bottom:22px; gap:12px; }
-.lp-support-title img { width:100%; height:auto; }
+.lp-support-title img { width:100%; height:auto; max-width:130px; justify-self:end; object-fit:contain; }
 .lp-support-title h3 { font-size:23px; }
 .lp-support-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
 .lp-support-list li { display:flex; align-items:center; gap:12px; min-height:70px; padding:14px; border:1px solid #d6e6f0; border-radius:8px; font-size:17px; font-weight:700; line-height:1.6; }
@@ -260,6 +261,7 @@ button, summary, [role="button"], #floating-cta,
  .lp-eyebrow { font-size:12px; margin-bottom:10px; letter-spacing:.12em; }
  .lp-section h3 { font-size:22px; }
  .lp-section .lp-note { font-size:14px; line-height:1.85; }
+ .lp-pc-br { display:none; }
  .lp-needs-grid { grid-template-columns:1fr; gap:0; }
  .lp-need { display:grid; grid-template-columns:55px minmax(0,1fr); column-gap:20px; row-gap:10px; text-align:left; padding:22px 10px; }
  .lp-need + .lp-need { border-left:0; border-top:1px solid var(--lp-line); }
