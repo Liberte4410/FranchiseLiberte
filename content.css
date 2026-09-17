@@ -54,7 +54,7 @@
 .lp-type-numbers > div + div { border-left:1px solid #bfd6e3; }
 .lp-type-numbers dt { font-size:15px; color:#4b6578; margin-bottom:5px; }
 .lp-type-numbers dd { color:var(--type-accent); font-size:18px; white-space:nowrap; line-height:1.4; }
-.lp-type-numbers strong { font-size:38px; letter-spacing:0; }
+.lp-type-numbers strong { font-size:38px; letter-spacing:0; margin-right:0.25em; }
 .lp-type-numbers sup { font-size:12px; margin-left:2px; }
 .lp-check-list li { display:grid; grid-template-columns:18px minmax(0,1fr); column-gap:9px; font-size:18px; line-height:1.8; }
 .lp-check-list li + li { margin-top:10px; }
@@ -102,7 +102,8 @@
 .lp-support-list .lp-icon { width:29px; height:29px; }
 .lp-support-detail { display:block; font-size:13px; font-weight:500; }
 .lp-three-way { display:flex; gap:22px; align-items:center; padding:26px 30px; margin-top:24px; background:#dfeef6; border-radius:10px; }
-.lp-three-way .lp-icon { width:52px; height:52px; }
+.lp-three-way .lp-icon { width:52px; height:52px; flex-shrink:0; }
+.lp-three-way h3 { white-space:nowrap; }
 .lp-three-way p { margin-top:8px; font-size:18px; }
 .lp-price-overview { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
 .lp-price-overview > div { border:1px solid var(--lp-line); border-radius:12px; padding:26px 20px; text-align:center; background:#f2f8fc; }
@@ -281,7 +282,7 @@ button, summary, [role="button"], #floating-cta,
  .lp-type-numbers > div { padding:0 8px; }
  .lp-type-numbers dt { font-size:13px; }
  .lp-type-numbers dd { font-size:15px; }
- .lp-type-numbers strong { font-size:30px; }
+ .lp-type-numbers strong { font-size:30px; margin-right:0.25em; }
  .lp-type-photo { grid-template-columns:100px minmax(0,1fr); gap:14px; padding-top:18px; }
  .lp-type-photo img { width:100px; height:100px; }
  .lp-type-photo p { font-size:16px; }
@@ -316,10 +317,10 @@ button, summary, [role="button"], #floating-cta,
  .lp-support-list li { flex-direction:column; align-items:flex-start; justify-content:center; gap:8px; min-height:105px; padding:13px; font-size:16px; }
  .lp-support-list .lp-icon { width:28px; height:28px; }
  .lp-support-detail { font-size:12px; }
- .lp-three-way { padding:23px 20px; align-items:flex-start; gap:15px; }
- .lp-three-way .lp-icon { width:34px; height:34px; margin-top:4px; }
- .lp-three-way h3 { font-size:21px; }
- .lp-three-way p { font-size:17px; }
+ .lp-three-way { padding:18px 14px; align-items:flex-start; gap:10px; }
+ .lp-three-way .lp-icon { width:26px; height:26px; margin-top:2px; flex-shrink:0; }
+ .lp-three-way h3 { font-size:clamp(11px, 3.6vw, 15px); white-space:nowrap; }
+ .lp-three-way p { font-size:16px; margin-top:6px; }
  .lp-price-overview { grid-template-columns:1fr; gap:12px; }
  .lp-price-overview > div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:20px 18px; text-align:left; }
  .lp-price-overview > div > span { font-size:15px; }
