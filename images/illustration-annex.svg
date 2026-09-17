@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" fill="none">
+ <defs>
+  <clipPath id="annex-panel-clip"><rect x="44.5" y="38.5" width="391" height="178"/></clipPath>
+ </defs>
+ <ellipse cx="240" cy="225" rx="205" ry="12" fill="#dbe9df"/>
+ <g clip-path="url(#annex-panel-clip)">
+  <rect x="43" y="37" width="394" height="181" fill="#fff9ed"/>
+  <rect x="270" y="65" width="167" height="153" fill="#dcefe5"/>
+  <rect x="43" y="37" width="394" height="28" fill="#bcded3"/>
+
+  <g stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+   <rect x="69" y="85" width="53" height="63" rx="22" fill="#dcecf7"/>
+   <rect x="165" y="85" width="53" height="63" rx="22" fill="#dcecf7"/>
+   <path d="M62 155h67"/><path d="M158 155h67"/>
+   <path d="M76 180h39"/><path d="M172 180h39"/>
+   <path d="M95 178v35"/><path d="M191 178v35"/>
+   <path d="M81 213h28"/><path d="M177 213h28"/>
+   <path d="M75 164v18h41v-18" fill="#e7af97"/>
+   <path d="M171 164v18h41v-18" fill="#e7af97"/>
+  </g>
+
+  <g stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+   <path d="M294 78h47c5 0 8 3 8 8l2 31h-66l2-31c0-5 3-8 7-8z" fill="#c7bade"/>
+   <rect x="294" y="86" width="48" height="22" rx="3" fill="#dcecf7"/>
+   <path d="M302 93h9M302 99h9M326 93h9M326 99h9"/>
+   <path d="M288 117h60l11 12v68h-81v-68z" fill="#fffdf6"/>
+   <rect x="284" y="132" width="69" height="21" rx="2" fill="#bcded3"/>
+   <circle cx="289" cy="165" r="4" fill="#f2c76e"/>
+   <circle cx="347" cy="165" r="4" fill="#86cbd0"/>
+   <rect x="305" y="166" width="23" height="27" rx="2" fill="#eef7fb"/>
+   <path d="M284 197v8M353 197v8M279 206h14M344 206h14"/>
+   <rect x="356" y="91" width="13" height="42" rx="6" fill="#f3d2bf"/>
+   <path d="M359 91v-7h7v7M353 133h20v11h-20z" fill="#fffdf6"/>
+  </g>
+
+  <path d="M317 179c12 25 42 29 59 7 8-11 14-17 22-15" stroke="#285575" stroke-width="8" stroke-linecap="round"/>
+  <path d="M317 179c12 25 42 29 59 7 8-11 14-17 22-15" stroke="#86cbd0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M318 185c18 28 49 27 64 5" stroke="#285575" stroke-width="7" stroke-linecap="round"/>
+  <path d="M318 185c18 28 49 27 64 5" stroke="#f2c76e" stroke-width="3" stroke-linecap="round"/>
+
+  <g transform="rotate(-7 391 181)" stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+   <path d="M372 151c8 10 27 12 37 1 3-3 7-2 8 2 1 6-5 13-13 17l-4 2h-25l-5-3c-7-4-11-10-9-15 1-4 7-6 11-4z" fill="#e7af97"/>
+   <path d="M376 170h28l-4 32c-1 7-6 11-13 10l-7-1c-6-1-9-6-8-12z" fill="#c7bade"/>
+   <rect x="380" y="179" width="18" height="11" rx="2" fill="#dcecf7"/>
+   <path d="M381 198h10M380 203h8"/>
+  </g>
+  <path d="M288 214h135" stroke="#76aa99" stroke-width="3" stroke-linecap="round"/>
+ </g>
+
+ <g stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M270 65.5v151" stroke="#76aa99" stroke-dasharray="6 7" stroke-linecap="butt"/>
+  <rect x="43" y="37" width="394" height="181"/>
+  <path d="M43 65h394"/>
+ </g>
+ <text x="153" y="57" text-anchor="middle" fill="#285575" font-family="Arial,sans-serif" font-size="17" letter-spacing="3">SALON</text>
+ <text x="353" y="57" text-anchor="middle" fill="#285575" font-family="Georgia,serif" font-size="19" letter-spacing="2">Liberté</text>
+ <path d="M239 109v22M228 120h22" stroke="#d3a459" stroke-width="3" stroke-linecap="round"/>
+</svg>

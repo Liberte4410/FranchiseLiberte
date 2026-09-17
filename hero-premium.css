@@ -1,0 +1,227 @@
+/* A premium first view with distinct color accents. Scoped to hero and header. */
+.franchise-hero {
+  --premium-ink:#1c3b50;
+  --premium-gold:#b59a60;
+  --premium-teal:#176466;
+  background:#faf8f3;
+  color:var(--premium-ink);
+  border-bottom:1px solid #e3e5e2;
+}
+.franchise-hero::before {
+  content:'';
+  position:absolute;
+  inset:0 0 0 52%;
+  z-index:-1;
+  background:#163f4a;
+  pointer-events:none;
+}
+.franchise-hero .hero-waves { display:none; }
+.franchise-hero .franchise-hero__inner {
+  width:calc(100% - 96px);
+  max-width:1320px;
+  min-height:0;
+  grid-template-columns:minmax(0,.97fr) minmax(0,1.03fr);
+  column-gap:44px;
+  padding:52px 0 46px;
+}
+.franchise-hero .hero-intro { text-align:left; }
+.franchise-hero .hero-eyebrow {
+  margin:0 0 18px;
+  padding:0;
+  color:#506571;
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.025em;
+  line-height:1.7;
+  white-space:normal;
+}
+.franchise-hero .hero-space { color:#826128; font-weight:700; text-decoration:none; }
+.franchise-hero .hero-recruitment {
+  width:max-content;
+  max-width:100%;
+  min-height:0;
+  justify-content:flex-start;
+  margin:0 0 22px;
+  padding:8px 18px;
+  border:0;
+  border-radius:0;
+  background:#e7d3a7;
+  box-shadow:none;
+  color:var(--premium-ink);
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:.07em;
+  line-height:1.5;
+}
+.franchise-hero .hero-title {
+  font-family:'Noto Serif JP','Yu Mincho','Hiragino Mincho ProN',serif;
+  font-size:clamp(38px,3.65vw,56px);
+  font-weight:800;
+  letter-spacing:.015em;
+  line-height:1.5;
+  color:var(--premium-ink);
+}
+.franchise-hero .hero-title span { margin:0; padding:0; background:none; }
+.franchise-hero .hero-title span:first-child { font-size:1.28em; line-height:1.35; margin-bottom:6px; }
+.franchise-hero .hero-title span:last-child { font-size:1.04em; color:var(--premium-teal); }
+.franchise-hero .hero-subtitle {
+  margin:20px 0 28px;
+  font-size:clamp(17px,1.4vw,21px);
+  font-weight:700;
+  letter-spacing:.015em;
+  line-height:1.8;
+  white-space:normal;
+}
+.franchise-hero .hero-visual {
+  margin:0;
+  aspect-ratio:1.4;
+  border:1px solid #fff;
+  border-radius:5px;
+  box-shadow:12px 12px 0 #b59a60,0 18px 42px rgba(16,41,50,.16);
+}
+.franchise-hero .hero-visual img { object-position:50% 50%; }
+.franchise-hero .hero-details { margin-top:0; }
+.franchise-hero .hero-facts { gap:10px; }
+.franchise-hero .hero-fact {
+  box-sizing:border-box;
+  min-width:0;
+  min-height:94px;
+  padding:15px 10px;
+  gap:7px;
+  border:1px solid #d7d5ca;
+  border-top-width:3px;
+  border-radius:5px;
+  background:rgba(255,255,255,.75);
+  color:var(--premium-ink);
+}
+.franchise-hero .hero-fact dt {
+  margin:0;
+  color:#5b6c75;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.6;
+}
+.franchise-hero .hero-fact dd {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:1.5em;
+  min-height:0;
+  margin:0;
+  font-family:'Noto Serif JP','Yu Mincho','Hiragino Mincho ProN',serif;
+  font-size:28px;
+  font-weight:800;
+  line-height:1.5;
+  letter-spacing:-.035em;
+}
+.franchise-hero .hero-fact--style dd { font-size:24px; height:1.75em; }
+.franchise-hero .hero-fact--hours { background:#e8f2ec; border-color:#bfd4c9; border-top-color:#367367; color:#246155; }
+.franchise-hero .hero-fact--hours dt { color:#365f55; }
+.franchise-hero .hero-fact--cost { background:#fbf0d9; border-color:#e4d4b1; border-top-color:#b58a3c; color:#825b1b; }
+.franchise-hero .hero-fact--cost dt { color:#765c2d; }
+.franchise-hero .hero-fact--style { background:#eaf0f7; border-color:#c4d1df; border-top-color:#355b80; color:#284c72; }
+.franchise-hero .hero-fact--style dt { color:#3a546e; }
+.franchise-hero .hero-support {
+  margin:18px 0 14px;
+  gap:12px;
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:.02em;
+  line-height:1.7;
+}
+.franchise-hero .hero-support::before,
+.franchise-hero .hero-support::after {
+  width:22px;
+  height:1px;
+  background:var(--premium-gold);
+  transform:none;
+  flex-shrink:0;
+}
+.franchise-hero .hero-actions { gap:12px; }
+.franchise-hero .hero-actions .hero-button {
+  min-height:62px;
+  padding:16px 18px;
+  border-radius:6px;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:0;
+  gap:10px;
+}
+.franchise-hero .hero-actions .hero-button--line { font-size:16px; }
+:is(.franchise-hero,.site-header) .hero-button--primary {
+  background:#1c3b50;
+  border:1px solid #1c3b50;
+  box-shadow:0 4px 12px rgba(28,59,80,.08);
+  color:#fff;
+}
+:is(.franchise-hero,.site-header) .hero-button--line {
+  background:#fff;
+  border:1px solid #319565;
+  box-shadow:none;
+  color:#16804a;
+}
+:is(.franchise-hero,.site-header) .hero-button:hover {
+  filter:none;
+  box-shadow:none;
+}
+:is(.franchise-hero,.site-header) .hero-button--primary:hover { background:#294d62; }
+:is(.franchise-hero,.site-header) .hero-button--line:hover { background:#f1f8f3; }
+:is(.franchise-hero,.site-header) .line-bubble { background:#06c755; color:#fff; }
+:is(.franchise-hero,.site-header) .line-bubble::after { border-top-color:#06c755; }
+.franchise-hero .hero-note {
+  margin-top:16px;
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:0;
+  line-height:1.8;
+  color:#5b6c75;
+  white-space:normal;
+  text-wrap:balance;
+}
+.site-header { box-shadow:none; border-bottom:1px solid #e5e6e0; }
+.site-header .site-nav { font-weight:500; }
+.site-header__actions .hero-button { border-radius:6px; font-weight:700; }
+
+@media (min-width:1024px) and (max-width:1199px) {
+  .franchise-hero .franchise-hero__inner { width:calc(100% - 72px); column-gap:32px; padding:40px 0; }
+  .franchise-hero .hero-recruitment { font-size:20px; }
+  .franchise-hero .hero-fact { padding:14px 6px; }
+  .franchise-hero .hero-fact dt { font-size:11px; }
+  .franchise-hero .hero-fact dd { font-size:24px; }
+  .franchise-hero .hero-fact--style dd { font-size:20px; height:1.8em; }
+  .franchise-hero .hero-actions { grid-template-columns:1fr; gap:10px; }
+  .franchise-hero .hero-actions .hero-button { min-height:56px; padding:12px 18px; font-size:17px; }
+  .franchise-hero .hero-support { font-size:14px; gap:8px; }
+}
+@media (max-width:1023px) {
+  .franchise-hero::before { inset:0 0 0 76%; background:#eee8dc; }
+  .franchise-hero .franchise-hero__inner { width:calc(100% - 64px); max-width:720px; padding:36px 0; }
+  .franchise-hero .hero-eyebrow { margin-bottom:16px; font-size:18px; }
+  .franchise-hero .hero-recruitment { font-size:21px; margin-bottom:20px; }
+  .franchise-hero .hero-title { font-size:clamp(32px,6.7vw,56px); }
+  .franchise-hero .hero-subtitle { font-size:19px; margin:18px 0 26px; }
+  .franchise-hero .hero-visual { aspect-ratio:1.6; border-radius:5px; box-shadow:10px 10px 0 #285761; }
+  .franchise-hero .hero-details { margin-top:30px; }
+  .franchise-hero .hero-actions { grid-template-columns:1fr 1fr; }
+  .franchise-hero .hero-fact { min-height:98px; }
+}
+@media (max-width:600px) {
+  .franchise-hero .franchise-hero__inner { width:calc(100% - 40px); padding:28px 0 30px; }
+  .franchise-hero .hero-eyebrow { font-size:clamp(14px,4.2vw,17px); margin-bottom:14px; letter-spacing:0; }
+  .franchise-hero .hero-recruitment { font-size:18px; letter-spacing:.035em; padding:7px 12px; margin-bottom:18px; }
+  .franchise-hero .hero-title { font-size:8.1vw; line-height:1.5; letter-spacing:.015em; }
+  .franchise-hero .hero-subtitle { font-size:clamp(14px,4.2vw,17px); line-height:1.7; margin:16px 0 22px; letter-spacing:0; }
+  .franchise-hero .hero-visual { aspect-ratio:1.455; }
+  .franchise-hero .hero-details { margin-top:26px; }
+  .franchise-hero .hero-facts { gap:8px; }
+  .franchise-hero .hero-fact { min-height:80px; padding:12px 5px; gap:6px; }
+  .franchise-hero .hero-fact dt { font-size:clamp(9.5px,2.75vw,12px); }
+  .franchise-hero .hero-fact dd { font-size:clamp(16px,5.25vw,23px); height:1.5em; }
+  .franchise-hero .hero-fact--style dd { font-size:clamp(13px,3.9vw,17px); height:1.923em; }
+  .franchise-hero .hero-support { margin:18px 0 14px; font-size:clamp(11px,3.45vw,15px); letter-spacing:0; gap:8px; }
+  .franchise-hero .hero-support::before,.franchise-hero .hero-support::after { width:14px; }
+  .franchise-hero .hero-actions { grid-template-columns:1fr; gap:12px; }
+  .franchise-hero .hero-actions .hero-button,
+  .franchise-hero .hero-actions .hero-button--line { min-height:64px; padding:16px; font-size:17px; }
+  .franchise-hero .hero-note { font-size:13px; margin-top:15px; }
+}

@@ -1,0 +1,25 @@
+/* Hirameki7 フォームID 36655 の「提供元側カスタムCSS」末尾に追加する補正。
+   LP の index.html に読み込んでも、外部 iframe 内には適用されません。
+   現在のフォームの項目・送信処理・確認画面は変更しません。 */
+@media screen and (max-width: 767px) {
+  .xhm-grid {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+  }
+  .xhm-grid-cell {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 0 !important;
+  }
+  input:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]),
+  select,
+  textarea {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+}

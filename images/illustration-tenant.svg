@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" fill="none">
+ <ellipse cx="240" cy="221" rx="199" ry="14" fill="#e5e2db"/><circle cx="385" cy="53" r="31" fill="#f4d883"/>
+ <g stroke="#285575" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M104 80h270v134H104z" fill="#fffdf7"/><path d="M97 77l18-37h248l18 37z" fill="#eab9a0"/>
+  <path d="M97 77h284v26H97z" fill="#275779"/><path d="M134 116h93v98h-93z" fill="#d9eaf6"/>
+  <path d="M250 116h97v68h-97z" fill="#d5eee2"/><path d="M298 116v68M250 151h97M151 127v75M214 158v16"/>
+  <path d="M273 57h-68" stroke="#bd8167"/><path d="M123 224h235"/><path d="M77 212v-66M71 177c-26-12-25-33-7-32 15 1 19 24 13 33M79 190c23-10 28-29 14-33-13-3-16 19-14 33" fill="#8dbda5"/>
+  <path d="M59 197h37l-5 24H64z" fill="#dc9a7d"/><path d="M404 160v57M388 202h32M388 161h32v31h-32z" fill="#f7e5ab"/>
+ </g>
+ <text x="239" y="96" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#fff" letter-spacing="3">Liberté</text>
+ <path d="M39 90h29M53 76v28M416 106h17M424 98v17" stroke="#93bda9" stroke-width="3" stroke-linecap="round"/>
+</svg>
