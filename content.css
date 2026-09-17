@@ -207,10 +207,11 @@
 
 /* Decorative color is limited to illustrations; the brand and buttons stay consistent. */
 .lp-type-a .lp-type-illustration { background:#f9f6ef; }
-.lp-type-b .lp-type-illustration { background:#f0f8f3; }
+.lp-type-b .lp-type-illustration { background:#f5fbf7; }
 .lp-need:nth-child(2) .lp-icon,
 .lp-reason-card:nth-child(2) .lp-icon,
 .lp-support-list li:nth-child(3n + 2) .lp-icon { color:#447f73; }
+.lp-need:nth-child(2) .lp-icon { stroke-width:1.15; }
 .lp-need:nth-child(3) .lp-icon,
 .lp-support-list li:nth-child(3n) .lp-icon { color:#a25c48; }
 .lp-reason-card:nth-child(3) .lp-icon,
